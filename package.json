@@ -1,0 +1,14 @@
+{
+  "name": "ember-cli-simple-auth-torii",
+  "author": "Marco Otte-Witte",
+  "license": "MIT",
+  "version": "0.6.2",
+  "description": "Include the Ember Simple Auth Torii.0 extension library into an Ember CLI application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ember-addon"
+  ]
+}
