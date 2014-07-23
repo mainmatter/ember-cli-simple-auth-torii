@@ -1,11 +1,18 @@
+(function(global) {
+  var define = global.define;
+  var require = global.require;
+  var Ember = global.Ember;
+  if (typeof Ember === 'undefined' && typeof require !== 'undefined') {
+    Ember = require('ember');
+  }
+
+Ember.libraries.register('Ember Simple Auth Torii', '0.6.3');
+
 define("simple-auth-torii/authenticators/torii", 
   ["simple-auth/authenticators/base","exports"],
   function(__dependency1__, __exports__) {
     "use strict";
     var Base = __dependency1__["default"];
-
-    var global = (typeof window !== 'undefined') ? window : {},
-        Ember = global.Ember;
 
     /**
       Authenticator that wraps the
@@ -109,9 +116,6 @@ define("simple-auth-torii/ember",
   ["./initializer"],
   function(__dependency1__) {
     "use strict";
-    var global = (typeof window !== 'undefined') ? window : {},
-        Ember = global.Ember;
-
     var initializer = __dependency1__["default"];
 
     Ember.onLoad('Ember.Application', function(Application) {
@@ -135,3 +139,4 @@ define("simple-auth-torii/initializer",
       }
     };
   });
+})((typeof global !== 'undefined') ? global : window);
