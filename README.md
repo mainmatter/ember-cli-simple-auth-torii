@@ -9,7 +9,7 @@ Addon.
 To install simply run
 
 ```
-npm install --save-dev ember-cli-simple-auth-torii
+npm install --save-dev torii ember-cli-simple-auth-torii
 ```
 
 in your Ember CLI project's root.
