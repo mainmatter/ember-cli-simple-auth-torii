@@ -20,5 +20,9 @@
     "type": "git",
     "url": "git://github.com/simplabs/ember-cli-simple-auth-torii"
   },
-  "homepage": "https://github.com/simplabs/ember-cli-simple-auth-torii"
+  "homepage": "https://github.com/simplabs/ember-cli-simple-auth-torii",
+  "dependencies": {
+    "ember-cli-simple-auth": "0.6.4-1",
+    "torii": "0.1.3"
+  }
 }
