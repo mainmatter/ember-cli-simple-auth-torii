@@ -11,11 +11,6 @@
   "keywords": [
     "ember-addon"
   ],
-  "files": [
-    "app-addon/**",
-    "vendor-addon/ember-simple-auth/simple-auth-torii.amd.js",
-    "index.js"
-  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/simplabs/ember-cli-simple-auth-torii"
