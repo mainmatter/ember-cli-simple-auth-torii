@@ -1,13 +1,19 @@
 module.exports = {
-  name: 'ember-cli-simple-auth-oauth2',
+  name: 'Ember CLI Simple Auth torii',
+
+  blueprintsPath: function() {
+    return path.join(__dirname, 'blueprints');
+  },
 
   included: function(app) {
     this._super.included(app);
 
-    this.app.import('bower_components/ember-simple-auth/simple-auth-torii.amd.js', {
+    this.app.import(app.bowerDirectory + '/ember-simple-auth/simple-auth.amd.js', {
       exports: {
-        'simple-auth-torii/authenticators/torii': ['default'],
-        'simple-auth-torii/initializer':          ['default']
+        'simple-auth-torii': [
+          'authenticators/torii',
+          'initializer'
+        ]
       }
     });
   }
