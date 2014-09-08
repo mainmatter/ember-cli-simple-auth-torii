@@ -1,35 +1,14 @@
-var path = require('path');
-var fs   = require('fs');
+module.exports = {
+  name: 'ember-cli-simple-auth-oauth2',
 
-function EmberCLISimpleAuthTorii(project) {
-  this.project = project;
-  this.name    = 'Ember CLI Simple Auth Torii';
-}
+  included: function(app) {
+    this._super.included(app);
 
-function unwatchedTree(dir) {
-  return {
-    read:    function() { return dir; },
-    cleanup: function() { }
-  };
-}
-
-EmberCLISimpleAuthTorii.prototype.treeFor = function included(name) {
-  var treePath = path.join('node_modules/ember-cli-simple-auth-torii', name + '-addon');
-
-  if (fs.existsSync(treePath)) {
-    return unwatchedTree(treePath);
+    this.app.import('bower_components/ember-simple-auth/simple-auth-torii.amd.js', {
+      exports: {
+        'simple-auth-torii/authenticators/torii': ['default'],
+        'simple-auth-torii/initializer':          ['default']
+      }
+    });
   }
-};
-
-EmberCLISimpleAuthTorii.prototype.included = function included(app) {
-  this.app = app;
-
-  this.app.import('vendor/ember-simple-auth/simple-auth-torii.amd.js', {
-    exports: {
-      'simple-auth-torii/authenticators/torii': ['default'],
-      'simple-auth-torii/initializer':          ['default']
-    }
-  });
-};
-
-module.exports = EmberCLISimpleAuthTorii;
+}
