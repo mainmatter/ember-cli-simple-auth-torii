@@ -6,12 +6,13 @@ Addon.
 
 ## Installation
 
-**Ember Simple Auth torii requires at least Ember CLI 0.0.42.**
+**Ember Simple Auth torii requires at least Ember CLI 0.0.44.**
 
 To install simply run
 
 ```
 npm install --save-dev torii ember-cli-simple-auth-torii
+ember generate ember-cli-simple-auth-torii
 ```
 
 in your Ember CLI project's root.
