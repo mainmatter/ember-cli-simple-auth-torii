@@ -11,11 +11,17 @@ Addon.
 To install simply run
 
 ```
-npm install --save-dev torii ember-cli-simple-auth-torii
-ember generate ember-cli-simple-auth-torii
+ember install:addon ember-cli-simple-auth-torii
 ```
 
 in your Ember CLI project's root.
+
+If you're using Ember CLI 0.1.4 or older, run
+
+```
+npm install --save-dev ember-cli-simple-auth-torii
+ember generate ember-cli-simple-auth-torii
+```
 
 For the actual Ember Simple Auth repository see
 https://github.com/simplabs/ember-simple-auth
